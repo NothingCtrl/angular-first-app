@@ -41,20 +41,4 @@ export class ServersComponent implements OnInit {
     this.toggle = !this.toggle;
     this.logs.push(new Date());
   }
-
-  logDecor(value, isStyle = false) {
-    let count = 0;
-    for (let log in this.logs) {
-      count += 1;
-      if (this.logs[log] == value) {
-        if (count > 4) {
-          return isStyle ? 'green' : true;
-        } else {
-          return isStyle ? 'none' : false;
-        }
-      }
-    }
-  }
-
-
 }

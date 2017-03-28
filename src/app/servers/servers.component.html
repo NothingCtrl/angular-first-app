@@ -21,4 +21,4 @@
 <hr>
 <button class="btn btn-warning" (click)="onClickButton()">Display Details</button>
 <p *ngIf="toggle">The secret password is: UUNHaa1</p>
-<p *ngFor="let log of logs"><span [ngStyle]="{backgroundColor: logDecor(log, true)}" [ngClass]="{'count': logDecor(log)}">{{ log }}</span></p>
+<p *ngFor="let log of logs; let i = index"><span [ngStyle]="{backgroundColor: i > 3 ? 'blue' : 'none'}" [ngClass]="{'count': i > 3}">{{ log }}</span></p>
